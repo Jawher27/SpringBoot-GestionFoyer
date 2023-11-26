@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -26,7 +27,7 @@ public class Bloc {
       Foyer foyer;
 
      @OneToMany(mappedBy = "bloc")
-      Set<Chambre> chambreSet;
+     List<Chambre> chambres;
 
 
 

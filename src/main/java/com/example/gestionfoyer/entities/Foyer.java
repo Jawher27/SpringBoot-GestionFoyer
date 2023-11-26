@@ -26,5 +26,5 @@ public class Foyer {
       Universite universite;
 
      @OneToMany(mappedBy = "foyer")
-     Set<Bloc> blocSet;
+     List<Bloc> blocs;
 }

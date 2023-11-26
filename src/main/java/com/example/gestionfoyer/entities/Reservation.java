@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -24,5 +25,5 @@ public class Reservation {
     boolean estValide;
 
     @ManyToMany
-    Set<Etudiant> etudiantSet;
+    List<Etudiant> etudiants;
 }

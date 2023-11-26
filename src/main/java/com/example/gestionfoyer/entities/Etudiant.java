@@ -6,6 +6,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -28,8 +29,8 @@ public class Etudiant {
      @Temporal(TemporalType.DATE)
      Date dateNaissance;
 
-     @ManyToMany(mappedBy = "etudiantSet")
-    Set<Reservation> reservations;
+     @ManyToMany(mappedBy = "etudiants")
+     List<Reservation> reservations;
 
 
 }
