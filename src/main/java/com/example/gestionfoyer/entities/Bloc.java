@@ -1,5 +1,6 @@
 package com.example.gestionfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -27,6 +28,7 @@ public class Bloc {
       Foyer foyer;
 
      @OneToMany(mappedBy = "bloc")
+     @JsonIgnore
      List<Chambre> chambres;
 
 

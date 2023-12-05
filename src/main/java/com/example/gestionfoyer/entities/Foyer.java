@@ -1,5 +1,6 @@
 package com.example.gestionfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -23,6 +24,7 @@ public class Foyer {
      long capaciteFoyer;
 
      @OneToOne(mappedBy = "foyer")
+
       Universite universite;
 
      @OneToMany(mappedBy = "foyer")

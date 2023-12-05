@@ -1,5 +1,6 @@
 package com.example.gestionfoyer.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -23,5 +24,6 @@ public class Universite {
      String adresse;
 
     @OneToOne
+
     Foyer foyer;
 }
