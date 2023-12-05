@@ -4,7 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.util.Date;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -14,6 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Builder
 public class Reservation {
 
 
@@ -21,7 +23,7 @@ public class Reservation {
     //@Setter(AccessLevel.NONE)
     String idReservation;
     @Temporal(TemporalType.DATE)
-    Date anneeUniversitaire;
+    LocalDate anneeUniversitaire;
     boolean estValide;
 
     @ManyToMany
